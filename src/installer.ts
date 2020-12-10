@@ -144,10 +144,10 @@ async function acquireTfx(version: string): Promise<string> {
   }
 }
 
-function exist(path: string): boolean {
+function exist(pathToValid: string): boolean {
   var exist = false
   try {
-    exist = !!(path && fs.statSync(path) != null)
+    exist = !!(path && fs.statSync(pathToValid) != null)
   } catch (err) {
     if (err && err.code === 'ENOENT') {
       exist = false
