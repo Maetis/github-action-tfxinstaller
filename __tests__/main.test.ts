@@ -3,10 +3,16 @@
 // import * as cp from 'child_process'
 // import * as path from 'path'
 
+import {assert} from 'console'
+
 // test('throws invalid number', async () => {
 //   const input = parseInt('foo', 10)
 //   await expect(wait(input)).rejects.toThrow('milliseconds not a number')
 // })
+
+test('test', async () => {
+  assert(true)
+})
 
 // test('wait 500 ms', async () => {
 //   const start = new Date()
