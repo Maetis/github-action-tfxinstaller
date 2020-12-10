@@ -52,7 +52,7 @@ export async function getTfxCli(
       path.join(toolPath, '/node_modules/.bin/')
     ]
     toolPath = probePaths.find(probePath => {
-      return exist(path.join(probePath, '/tfx'))
+      return _exist(path.join(probePath, '/tfx'))
     })
   }
   core.exportVariable('__tfxpath', toolPath)
@@ -144,8 +144,8 @@ async function acquireTfx(version: string): Promise<string> {
   }
 }
 
-function exist(pathToValid: string): boolean {
-  var exist = false
+function _exist(pathToValid: string): boolean {
+  let exist: boolean = false
   try {
     exist = !!(path && fs.statSync(pathToValid) != null)
   } catch (err) {
