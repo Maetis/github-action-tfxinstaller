@@ -22,3 +22,4 @@ jobs:
       - uses: ./
         with:
           version: 0.8.x
+      - run: tfx version
