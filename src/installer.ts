@@ -145,7 +145,7 @@ async function acquireTfx(version: string): Promise<string> {
 }
 
 function _exist(pathToValid: string): boolean {
-  let exist: boolean = false
+  let exist = false
   try {
     exist = !!(path && fs.statSync(pathToValid) != null)
   } catch (err) {
