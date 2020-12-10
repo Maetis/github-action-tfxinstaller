@@ -5,7 +5,9 @@ async function run(): Promise<void> {
   try {
     const version: string = core.getInput('version')
     const checkLatest: boolean =
-      core.getInput('checkLatest').toLowerCase() == 'true'
+      core.getInput('checkLatest').toLowerCase() === 'true'
+
+    installer.getTfxCli(version, checkLatest)
   } catch (error) {
     core.setFailed(error.message)
   }
