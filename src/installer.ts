@@ -62,7 +62,7 @@ function isExplicitVersion(versionSpec: string) {
   const c = semver.clean(versionSpec)
   core.debug('isExplicit: ' + c)
 
-  let valid = semver.valid(versionSpec)
+  const valid = semver.valid(versionSpec)
   core.debug('explicit? ' + valid)
 
   return valid
