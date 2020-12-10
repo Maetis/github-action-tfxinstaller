@@ -70,16 +70,11 @@ function isExplicitVersion(versionSpec: string): string {
 
 async function queryLatestMatch(versionSpec: string): Promise<string> {
   let npmOutput = ''
-  let npmError = ''
 
   const options: exec.ExecOptions = {}
   options.listeners = {
     stdout: (data: Buffer) => {
       npmOutput += data.toString()
-    },
-
-    stderr: (data: Buffer) => {
-      npmError += data.toString()
     }
   }
 
