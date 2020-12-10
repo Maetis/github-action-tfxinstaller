@@ -93,7 +93,7 @@ async function queryLatestMatch(versionSpec: string): Promise<string> {
 
 function evaluateVersions(versions: string[], versionSpec: string): string {
   let version: string
-  core.debug('evaluating ' + versions.length + ' versions')
+  core.debug(`evaluating ${versions.length.toString()} versions`)
   versions = versions.sort(cmp)
   for (let i = versions.length - 1; i >= 0; i--) {
     let potential: string = versions[i]
