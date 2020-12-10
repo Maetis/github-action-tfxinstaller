@@ -105,7 +105,7 @@ function evaluateVersions(versions: string[], versionSpec: string): string {
   }
 
   if (version) {
-    core.debug('matched: ' + version)
+    core.debug('matched: '.concat(version))
   } else {
     core.debug('match not found')
   }
