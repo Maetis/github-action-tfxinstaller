@@ -1,11 +1,15 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'TfxInstaller'
+description: 'Install tfx-cli inside the tool cache.'
+author: 'Kevin Lecouvey'
 inputs:
-  milliseconds: # change this
+  version: 
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Specify which tfx-cli version you want to use. Ex.: v0.8x, >=v0.5.x'
+    default: 'v0.8.x'
+  checkLatest:
+    required: false
+    description: 'Automatically download the latest version of tfx-cli'
+    default: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
