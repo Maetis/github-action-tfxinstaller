@@ -58,7 +58,7 @@ export async function getTfxCli(
   core.exportVariable('__tfxpath', toolPath)
 }
 
-function isExplicitVersion(versionSpec: string) {
+function isExplicitVersion(versionSpec: string): string {
   const c = semver.clean(versionSpec)
   core.debug('isExplicit: '.concat(c))
 
