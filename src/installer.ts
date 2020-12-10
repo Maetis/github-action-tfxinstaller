@@ -59,7 +59,7 @@ export async function getTfxCli(
 }
 
 function isExplicitVersion(versionSpec: string) {
-  let c = semver.clean(versionSpec)
+  const c = semver.clean(versionSpec)
   core.debug('isExplicit: ' + c)
 
   let valid = semver.valid(versionSpec)
