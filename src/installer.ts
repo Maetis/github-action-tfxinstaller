@@ -17,7 +17,7 @@ export async function getTfxCli(
   }
   // check for node
   const any_node_verion: string[] = tc.findAllVersions('node')
-  if (any_node_verion.length == 0) {
+  if (any_node_verion.length === 0) {
     throw new Error(
       'Unable to find Node! Please use actions/setup-node before colling this action.'
     )
