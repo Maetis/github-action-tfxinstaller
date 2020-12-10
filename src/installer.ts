@@ -8,7 +8,10 @@ import * as os from 'os'
 import * as fs from 'fs'
 import cmp from 'semver-compare'
 
-export async function getTfxCli(versionSpec: string, checkLatest: boolean) {
+export async function getTfxCli(
+  versionSpec: string,
+  checkLatest: boolean
+): Promise<void> {
   if (isExplicitVersion(versionSpec)) {
     checkLatest = false
   }
