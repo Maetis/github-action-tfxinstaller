@@ -128,7 +128,7 @@ async function acquireTfx(version: string): Promise<string> {
 
     const result = await exec.exec('npm', [
       'install',
-      'tfx-cli@' + version,
+      'tfx-cli@'.concat(version),
       '-g',
       '--prefix',
       extPath
