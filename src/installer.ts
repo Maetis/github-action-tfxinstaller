@@ -56,6 +56,7 @@ export async function getTfxCli(
     })
   }
   core.exportVariable('__tfxpath', toolPath)
+  core.addPath(toolPath)
 }
 
 function isExplicitVersion(versionSpec: string): string {
