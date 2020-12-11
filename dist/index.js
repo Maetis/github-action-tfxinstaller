@@ -90,6 +90,7 @@ function getTfxCli(versionSpec, checkLatest) {
             });
         }
         core.exportVariable('__tfxpath', toolPath);
+        core.addPath(toolPath);
     });
 }
 exports.getTfxCli = getTfxCli;
