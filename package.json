@@ -29,7 +29,7 @@
     "@actions/exec": "^1.0.4",
     "@actions/io": "^1.1.0",
     "@actions/tool-cache": "^1.6.1",
-    "@types/semver": "^7.3.4",
+    "@types/semver": "^7.3.5",
     "@types/semver-compare": "^1.0.1",
     "semver": "^6.3.0",
     "semver-compare": "^1.0.0"
