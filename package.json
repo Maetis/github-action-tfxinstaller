@@ -27,7 +27,7 @@
   "dependencies": {
     "@actions/io": "^1.1.1",
     "@actions/exec": "^1.1.1",
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.9.1",
     "@actions/tool-cache": "^1.7.2",
     "@types/semver": "^7.3.9",
     "@types/semver-compare": "^1.0.1",
